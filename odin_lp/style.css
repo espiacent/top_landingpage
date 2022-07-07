@@ -1,0 +1,177 @@
+:root {
+
+  /*Spacing*/
+
+  --spacer-sm: .5rem;
+  --spacer-md: 1rem;
+  --spacer-lg: 2rem;
+  --spacer-xlg: 3rem;
+
+  /* Color */
+
+  --bgcl-light-primary: #F9FAF8;
+  --bgcl-light-secondary: #E5E7EB;
+  --bgcl-dark-primary: #1F2937;
+  
+  --cl-highlight-primary: #3882F6;
+
+  /* Font */
+
+  --fs-small: 1.125rem;
+  --fs-medium: 1.5rem;
+  --fs-large: 2.25rem;
+  --fs-xlarge: 3rem;
+
+  --fw-light: 400;
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-xbold: 900; 
+
+  --fcl-light-primary: #F9FAF8;
+  --fcl-light-secondary: #E5E7EB;
+  --fcl-dark-primary: #1F2937;
+
+}
+
+/* CSS RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* My CSS */
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--bgcl-dark-primary);
+}
+
+.nav-list {
+  width: 100%;
+  background-color: var(--bgcl-dark-primary);
+  display: flex;
+  padding: 0.5rem;
+  list-style-type: none;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+.nav-item a {
+  margin-right: var(--spacer-xlg);
+  text-decoration: none;
+  color: var(--fcl-light-secondary);
+  font-size: var(--fs-small);
+  font-weight: bold;
+}
+
+.nav-item a:hover {
+  color: var(--cl-highlight-primary);
+  transition: all 300ms ease-in;
+}
+
+#heart {
+  margin-right: 0.3rem;
+}
+
+#heart:hover {
+  color: rgb(148, 26, 26);
+  transform: scale(1.2);
+  transition: all 500ms ease-in;
+}
+
+.nav-item:first-child {
+    color: var(--fcl-light-primary);
+    font-size: var(--fs-medium);
+    font-weight: var(--fw-bold);
+    margin-right: auto;
+    margin-left: var(--spacer-xlg);
+    flex-shrink: 0;
+}
+
+.hero {
+  margin-top: 7rem;
+  background-color: var(--bgcl-dark-primary);
+}
+
+.hero-main {
+  color: var(--fcl-light-primary);
+  font-size: var(--fs-xlarge);
+  font-weight: var(--fw-xbold);
+  margin-left: var(--spacer-xlg);
+  padding: var(--spacer-sm);
+}
+
+.hero-secondary {
+  color: var(--fcl-light-secondary);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-light);
+  margin-left: var(--spacer-xlg);
+  padding: var(--spacer-sm);
+  max-width: 50%;
+}
+

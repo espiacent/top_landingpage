@@ -138,6 +138,7 @@ footer {
   color: var(--fcl-light-primary);
   min-height: 10vh;
   text-align: center;
+  font-style: italic;
 }
 
 button {
@@ -202,6 +203,7 @@ h1 {
     padding-right: 4rem;
     padding-top: var(--spacer-md);
     flex-shrink: 0;
+    cursor: pointer;
 }
 
 .nav-item:first-child a {
@@ -421,6 +423,13 @@ h1 {
   width: 140px;
   align-self: center;
   margin-right: 4rem;
+  margin-top: 2rem;
+}
+
+.main-container-lower-btn:hover {
+  cursor: pointer;
+  background-color: var(--bgcl-light-secondary);
+  color: var(--fcl-dark-primary);
 }
 
 /* FOOTER */

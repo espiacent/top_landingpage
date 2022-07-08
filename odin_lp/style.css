@@ -128,7 +128,16 @@ footer {
   background-color: var(--bgcl-dark-primary);
   color: var(--fcl-light-primary);
   min-height: 10vh;
+  text-align: center;
 }
+
+.footer-text {
+  padding: 30px;
+  color: var(--fcl-light-secondary);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-light);
+}
+
 button {
   color: var(--fcl-light-primary);
   background-color: var(--cl-highlight-primary);
@@ -162,6 +171,7 @@ button {
 }
 
 #heart {
+  color: rgb(148, 26, 26);
   margin-right: var(--spacer-sm);
 }
 
@@ -181,10 +191,27 @@ button {
     padding-top: var(--spacer-md);
     flex-shrink: 0;
 }
+
+.nav-item:first-child a {
+  all: unset;
+  cursor: pointer;
+}
+
+.nav-item:first-child {
+  color: var(--fcl-light-primary);
+  font-size: var(--fs-medium);
+  font-weight: var(--fw-bold);
+  margin-right: auto;
+  padding-left: 8rem;
+  padding-right: 4rem;
+  padding-top: var(--spacer-md);
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
 .nav-item:last-child {
   padding-right: 8rem;
 }
-
 
 .hero-container {
   padding-top: 10rem;
@@ -216,12 +243,15 @@ button {
   min-width: 50vh;
   max-width: 50vh;
   text-align: justify;
-  word-spacing: -3px;
+  word-spacing: -2px;
+  padding-bottom: 1rem;
 }
 
 .hero-img {
   min-width: 50vh;
   max-width: 50vh;
+  padding-right: 3rem;
+  padding-top: 1.2rem;
 }
 
 .hero-btn-container {
@@ -234,6 +264,12 @@ button {
   border-radius: 12px;
   border: none;
   margin-left: var(--spacer-xlg)
+}
+
+.hero-btn:hover {
+  cursor: pointer;
+  background-color: var(--bgcl-light-secondary);
+  color: var(--fcl-dark-primary)
 }
 
 .btn-link {
@@ -257,3 +293,31 @@ button {
   min-height: 30vh;
   color: var(--fcl-dark-primary);
 }
+
+/* SUBSITES */
+
+.header-container-html {
+  height: 75vh;
+  background-image: url(img/html.jpg);
+  background-repeat: no-repeat;
+  background-size: 1920px 768px;
+  background-position: center top;
+  }
+
+.header-container-css {
+  height: 75vh;
+  background-image: url(img/css.jpg);
+  background-repeat: no-repeat;
+  background-size: 1920px 768px;
+  background-position: center top;
+  }
+
+.header-container-js {
+  height: 75vh;
+  background-image: url(img/js.jpg);
+  background-repeat: no-repeat;
+  background-size: 1920px 768px;
+  background-position: center top;
+  }    
+
+  /* Maybe grey out and put text over, or different content beneath */

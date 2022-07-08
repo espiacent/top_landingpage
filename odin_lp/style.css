@@ -42,6 +42,7 @@
 }
 
 /* Remove default margin */
+
 * {
   margin: 0;
   padding: 0;
@@ -104,14 +105,22 @@ svg {
 @media (max-width: 600px) {
 
   .hero-img { display: none;}
-
 }
 
 @media (max-width: 610px) {
 
   .nav-item:first-child { display: none;}
-
+  .main-container-upper {flex-direction: column; align-items: center;}
 }
+@media (max-width: 700px) {
+
+  .main-container-lower-box {flex-direction: column;}
+  .nav-item:not(last-child) {margin-right: -1rem;}
+  .quote-container {margin-top: -2rem; margin-left: 2rem; margin-right: 2rem;}
+  .quote-container p {margin: 2rem; padding: 2rem;}
+}
+
+
 /* My CSS */
 
 html {
@@ -131,17 +140,20 @@ footer {
   text-align: center;
 }
 
-.footer-text {
-  padding: 30px;
-  color: var(--fcl-light-secondary);
-  font-size: var(--fs-small);
-  font-weight: var(--fw-light);
-}
-
 button {
   color: var(--fcl-light-primary);
   background-color: var(--cl-highlight-primary);
 }
+
+h1 {
+  text-align: center;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-medium);
+  padding: 3rem;
+  margin-bottom: -5rem;
+}
+
+/* NAV LIST */
 
 .nav-list {
   width: 100%;
@@ -213,6 +225,8 @@ button {
   padding-right: 8rem;
 }
 
+/* HERO CONTAINER */
+
 .hero-container {
   padding-top: 10rem;
   background-color: var(--bgcl-dark-primary);
@@ -248,13 +262,11 @@ button {
 }
 
 .hero-img {
-  min-width: 50vh;
-  max-width: 50vh;
+  width: 450px;
+  height: auto;
+  border-radius: 12px;
   padding-right: 3rem;
   padding-top: 1.2rem;
-}
-
-.hero-btn-container {
 }
 
 .hero-btn {
@@ -279,45 +291,149 @@ button {
   font-weight: var(--fw-light);
 }
 
-.main-container-upper {
-  min-height: 40vh;
-  color: var(--fcl-dark-primary);
-}
-
-.quote {
-  min-height: 40vh;
-  background-color: var(--bgcl-light-secondary);
-}
-
-.main-container-lower {
-  min-height: 30vh;
-  color: var(--fcl-dark-primary);
-}
-
-/* SUBSITES */
+/* HEADER SUBPAGES */
 
 .header-container-html {
   height: 75vh;
   background-image: url(img/html.jpg);
   background-repeat: no-repeat;
-  background-size: 1920px 768px;
-  background-position: center top;
+  background-size: auto;
+  background-position: center;
   }
 
 .header-container-css {
   height: 75vh;
   background-image: url(img/css.jpg);
   background-repeat: no-repeat;
-  background-size: 1920px 768px;
-  background-position: center top;
+  background-size: auto;
+  background-position: center;
   }
 
 .header-container-js {
   height: 75vh;
   background-image: url(img/js.jpg);
   background-repeat: no-repeat;
-  background-size: 1920px 768px;
-  background-position: center top;
-  }    
+  background-size: auto;
+  background-position: center;
+  } 
 
-  /* Maybe grey out and put text over, or different content beneath */
+  .header-container-python {
+    height: 75vh;
+    background-image: url(img/python.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    } 
+
+/* QUOTE */
+
+.quote-container {
+  min-height: 33vh;
+  background-color: var(--bgcl-light-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.quote-container p {
+  font-size: var(--fs-medium);
+  min-width: 50vh;
+  max-width: 80vh;
+  text-align: justify;
+  margin: auto;
+  padding-top: 6rem;
+}
+
+.quote-container span {
+  font-size: var(--fs-large);
+  margin-left: 55%;
+  margin-top: 0.7rem;
+  margin-bottom: 5rem;
+}
+
+/* MAIN CONTAINER UPPER */
+
+.main-container-upper {
+  min-height: 40vh;
+  color: var(--fcl-dark-primary);
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  gap: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.main-container-upper p {
+  text-align: center;
+  max-width: 200px;
+  padding-top: 0.5rem;
+  color: var(--fcl-dark-primary);
+  font-size: var(--fs-small)
+}
+
+.main-container-upper img {
+  border: 4px solid var(--cl-highlight-primary);
+  border-radius: 12px;
+}
+
+/* MAIN CONTAINER LOWER */
+
+.main-container-lower {
+  min-height: 30vh;
+  color: var(--fcl-dark-primary);
+  justify-content: center;
+  margin: auto;
+}
+
+.main-container-lower-box {
+  background-color: var(--cl-highlight-primary);
+  color: var(--fcl-light-primary);
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin: 5rem;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.main-container-lower-caption {
+  font-size: var(--fs-medium);
+  font-weight: var(--fw-bold);
+  max-width: 50%;
+  min-width: 300px;
+  margin: auto;
+}
+
+.main-container-lower-paragraph {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-regular);
+  min-width: 300px;
+}
+
+.main-container-lower-btn {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  border: 2px solid white;
+  border-radius: 12px;
+  padding: 5px;
+  width: 140px;
+  align-self: center;
+  margin-right: 4rem;
+}
+
+/* FOOTER */
+
+.footer-text {
+  padding: 30px;
+  color: var(--fcl-light-secondary);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-light);
+}
+
+/* DIVIDER */
+
+.divider {
+  padding: 0.1rem;
+}

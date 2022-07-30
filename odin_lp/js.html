@@ -42,10 +42,18 @@
         <p>Python is a coding language that is good a good starting point as the code is quite readable.</p>
       </div>
     </div>
-    <div class="quote-container">
-      <p>“The single greatest skill I have picked up for my professional life has been learning how to code. Had I not
-        learned to code, I would have been out of work years ago. It’s been liberating and very lucrative.”</p>
-      <span>– Daniel Davidson</span>
+    <div id="quote-container-2">
+      <input id="textBox" type="text"></input>
+      <div id="output"></div>
+      
+      <script>const textBox = document.querySelector('#textBox');
+        const output = document.querySelector('#output');
+
+        textBox.addEventListener(
+          'keydown',
+          (event) => (output.textContent = `You pressed "${event.key}".`)
+        );
+      </script>
     </div>
     <div class="main-container-lower">
       <div class="main-container-lower-box">
